@@ -1,7 +1,7 @@
 # Projet de gestion des opérations crud avec Symfony,Vuejs,QuoraJs
 
-Créer le repository git
-Créer le projet symfony avec la commande
+-Créer le repository git
+-Créer le projet symfony avec la commande
 
 ```sh
 symfony new symfony-vuejs-api-crud
