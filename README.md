@@ -47,6 +47,45 @@ cd symfony-vuejs-api-crud
 composer req --dev debug
 ```
 
+    1.2. Outil de vérification de code
+
+```sh
+composer req friendsofphp/php-cs-fixer --dev
+# Ajouter les lignes suivantes au fichier composer.json
+"scripts": {
+    # code...
+    "fix": "php-cs-fixer fix",
+    "check": "php-cs-fixer fix --dry-run --diff"
+    # code...
+}
+```
+
+    1.3. Outil de détection des bugs - Analyseur statique de code `PHPStan`
+
+```sh
+composer require --dev phpstan/phpstan
+composer require --dev phpstan/extension-installer
+composer require --dev phpstan/phpstan-symfony
+composer require --dev phpstan/phpstan-phpunit
+composer require --dev phpstan/phpstan-doctrine
+# Ajouter les lignes suivantes au fichier phpstan.neon à la racine
+#...phpstan.neon
+parameters:
+    path:
+        - src
+        - tests
+    level: 9
+# Ajouter les lignes suivantes au fichier composer.json
+"scripts": {
+    # code...
+    "check": [
+        "phpstan",
+        "php-cs-fixer fix --dry-run --diff"
+    ]
+    # code...
+}
+```
+
 2. Outils gestion de la base de donnée à partir de `PHP`
    2.1. Installation de `ORM`,`twig` et `maker-bundle`
 
