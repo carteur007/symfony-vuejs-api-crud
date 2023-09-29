@@ -1,4 +1,4 @@
-# Projet de gestion des opérations crud avec Symfony,Vuejs,QuoraJs
+# Projet de gestion des opérations crud avec Symfony,Docker compose,Vuejs
 
 > Vous pouvez outre-passer ces étapes et cloner le repository directement avec l'une des commandes suivantes:
 > HTTPS `https://github.com/carteur007/symfony-vuejs-api-crud.git`
@@ -89,13 +89,13 @@ parameters:
 2. Outils gestion de la base de donnée à partir de `PHP`
    2.1. Installation de `ORM`,`twig` et `maker-bundle`
 
-    > Nous utilisation `sqlite3`
+    > Nous utilisation `Mysql`
 
 ```sh
 composer req symfony/orm-pack
 composer req --dev symfony/maker-bundle
 #Modifier le fichier .env et decommenter la ligne suivante
-DATABASE_URL="sqlite:///%kernel.project_dir%/var/app.db"
+DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=10.11.2-MariaDB&charset=utf8mb4"
 ```
 
 3. Outils gestion des templates
@@ -110,3 +110,5 @@ composer req twig
 ```
 
     3.2. Template `HTML` et `CSS`
+
+4. Mise en place de Docker, avec Docker compose
