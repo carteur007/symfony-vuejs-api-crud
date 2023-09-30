@@ -95,7 +95,7 @@ parameters:
 composer req symfony/orm-pack
 composer req --dev symfony/maker-bundle
 #Modifier le fichier .env et decommenter la ligne suivante
-DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=10.11.2-MariaDB&charset=utf8mb4"
+DATABASE_URL="mysql://root:root@mysql8-service:3306/symfony-vuejs-api-crud?serverVersion=8"
 ```
 
 3. Outils gestion des templates
